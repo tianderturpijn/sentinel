@@ -5,6 +5,15 @@
         "PlaybookName": {
             "defaultValue": "Create-Sentinel-Incident",
             "type": "String"
+        },
+        "WorkspaceName":{
+            "type": "string"
+        },
+        "WorkspaceResourceGroupName":{
+            "type": "string"
+        },
+        "SubscriptionId":{
+            "type": "string"
         }
     },
     "variables": {
@@ -196,7 +205,7 @@
                                     {
                                         "name": "resourceGroupName",
                                         "type": "string",
-                                        "value": ""
+                                        "value": "[parameters('WorkspaceResourceGroupName')]"
                                     }
                                 ]
                             }
@@ -213,7 +222,7 @@
                                     {
                                         "name": "subscriptionId",
                                         "type": "string",
-                                        "value": ""
+                                        "value": "[parameters('SubscriptionId')]"
                                     }
                                 ]
                             }
@@ -230,7 +239,7 @@
                                     {
                                         "name": "workspaceName",
                                         "type": "string",
-                                        "value": ""
+                                        "value": "[parameters('WorkspaceName')]"
                                     }
                                 ]
                             }
